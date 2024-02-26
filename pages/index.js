@@ -29,13 +29,13 @@ export default function HomeScreen() {
           username: values.usuario,
           password: values.senha
         })
-        .then(() => {
-          // router.push('/auth-page-static')
-          router.push('/auth-page-ssr')
-        })
-        .catch(() => {
-          alert('Usuário ou a senha estão inválidos')
-        })
+          .then(() => {
+            // router.push('/auth-page-static')
+            router.push('/auth-page-ssr')
+          })
+          .catch(() => {
+            alert('Usuário ou a senha estão inválidos')
+          })
       }}>
         <input
           placeholder="Usuário" name="usuario"
@@ -55,6 +55,10 @@ export default function HomeScreen() {
             Entrar
           </button>
         </div>
+        <p>
+          <a href="/auth-page-ssr" >Auth-Page-SSR</a>
+          <a href="/auth-page-static">Auth-Page-Static</a>
+        </p>
       </form>
     </div>
   );
